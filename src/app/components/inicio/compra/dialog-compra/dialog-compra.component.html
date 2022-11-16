@@ -1,0 +1,49 @@
+<h1 mat-dialog-title>CONFIRMAR DATOS DE COMPRA</h1>
+<div mat-dialog-content>
+    Datos del comprador
+        <mat-grid-list cols="2" rowHeight="70px">
+            <form [formGroup]="form" (ngSubmit)="pagarCompra()">
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Nombres</mat-label>
+                        <input matInput formControlName="" formControlName="nombres" readonly >
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Apellidos</mat-label>
+                        <input matInput formControlName="apellidos" readonly>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Email</mat-label>
+                        <input  matInput formControlName="email" readonly>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="1" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Telefono</mat-label>
+                        <input matInput formControlName="telefono" readonly>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile [colspan]="2" [rowspan]="1">
+                    <mat-form-field class="ancho">
+                        <mat-label>Seleccione su domicilio de entrega</mat-label>
+                        <mat-select formControlName="domicilioE">
+                            <mat-option *ngFor="let dom of domicilios"  value="{{dom}}">
+                            {{dom}}
+                            </mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </mat-grid-tile>
+                <mat-grid-tile  [colspan]="2" [rowspan]="1">
+                    <button class="btn" type="submit" mat-raised-button color="primary" mat-dialog-close>PAGAR</button>
+                </mat-grid-tile>
+            </form>
+        </mat-grid-list>
+    </div>
+    <div mat-dialog-actions align="end">
+        <button mat-raised-button color="warn" mat-button mat-dialog-close>CANCELAR</button>
+        
+    </div>

@@ -1,0 +1,68 @@
+.head-nav{
+    background-color: #6D326D;
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.btn-float{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+mat-grid-tile {
+    background: #E5F4E3;
+}
+
+table {
+    width: 100%;
+    
+}
+
+td, th{
+    width: 15%;
+}
+
+.tabla{
+    margin: 0 5%;
+    margin-top: 3%;
+   
+}
+
+.no-Product{
+    width: 100%;
+    text-align: center;
+    max-width: 400px;
+}
+
+
+.info-Product{
+    margin: 0 5%;
+    margin-top: 3%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.delete{
+    cursor: pointer;
+    color: #E15639;
+}
+
+.total{
+    margin-top: 2%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+::ng-deep .delete-snackbar{
+    background: rgb(215, 53, 20);
+    color: aliceblue;
+}

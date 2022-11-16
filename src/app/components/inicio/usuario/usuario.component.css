@@ -1,0 +1,21 @@
+.head-nav{
+    background-color: #6D326D;
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.btn-float{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+mat-grid-tile {
+    background: #E5F4E3;
+}
+
+
+

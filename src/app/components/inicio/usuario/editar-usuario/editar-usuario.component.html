@@ -1,0 +1,62 @@
+<mat-toolbar class="head-nav">
+    <span>Editar datos del usuario</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/inicio/compra"><mat-icon fontIcon="shopping_bag"></mat-icon> Mis Compras</button>
+    <button mat-button routerLink="/inicio/usuario"><mat-icon fontIcon="person"></mat-icon> Mi cuenta</button>
+    <button mat-button (click)="logout()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>  Salir
+    </button>
+</mat-toolbar>
+<mat-card  style="margin:0 17%; margin-top: 3%;">
+    <mat-grid-list cols="2" rowHeight="70px">
+        <form [formGroup]="form" (ngSubmit)="editarUsuario()" >
+            <mat-grid-tile [colspan]="2" [rowspan]="3">
+                <img src="../assets/img/logo.png" alt="logoUser" width="22%">
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Nombres</mat-label>
+                    <input matInput formControlName="" formControlName="nombres">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Apellidos</mat-label>
+                    <input matInput formControlName="apellidos">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Email</mat-label>
+                    <input  matInput formControlName="email">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Telefono</mat-label>
+                    <input matInput formControlName="telefono">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1">
+                <mat-form-field class="ancho">
+                    <mat-label>Domicilio residencial</mat-label>
+                    <input matInput formControlName="domicilioR">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="2" [rowspan]="1"> 
+                <mat-form-field class="ancho">
+                    <mat-label>Domicilio del trabajo</mat-label>
+                    <input matInput formControlName="domicilioT">
+                </mat-form-field>
+            </mat-grid-tile>
+            <mat-grid-tile  [colspan]="2" [rowspan]="1">
+                <button class="btn" mat-raised-button color="primary">Aceptar</button>
+            </mat-grid-tile>
+        </form>
+    </mat-grid-list>
+</mat-card>
+
+<button routerLink="/inicio/producto" class="btn-float"  matTooltip="página de productos" mat-fab color="warn">
+    <mat-icon>home</mat-icon>
+</button>
+

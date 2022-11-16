@@ -1,0 +1,33 @@
+.head-nav{
+    background-color: #6D326D;
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.btn-float{
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+}
+
+mat-grid-tile {
+    background: #FFFFFF;
+}
+
+.ancho{
+    width: 90%;
+}
+
+.btn{
+    width: 20%;
+    height: 50px;
+}
+
+
+::ng-deep .green-snackbar{
+    background: rgb(126, 208, 122);
+    color: aliceblue;
+}

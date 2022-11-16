@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="login">
+        <form [formGroup]="form" (ngSubmit)="login(form.value)">
+            <img src="../assets/img/compras.png" alt="usuario" width="50%">
+            <h1 style="margin-top: 5px;">Bienvenido al sistema</h1>
+            <mat-form-field  class="ancho" >
+                <mat-label>Usuario</mat-label>
+                <input formControlName="username" autocomplete="off" matInput>
+            </mat-form-field>
+            <br>
+            <mat-form-field class="ancho" >
+                <mat-label>Contraseña</mat-label>
+                <input type="password" formControlName="password" autocomplete="off" matInput>
+            </mat-form-field>
+            <br>
+            <button [disabled]="form.invalid" type="submit" class="btn" mat-raised-button color="primary">Ingresar</button>
+        </form>
+    </div>
+</div>

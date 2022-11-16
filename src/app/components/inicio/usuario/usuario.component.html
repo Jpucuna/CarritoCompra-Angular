@@ -1,0 +1,27 @@
+<mat-toolbar class="head-nav">
+    <span>Datos del comprador</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/inicio/compra"><mat-icon fontIcon="shopping_bag"></mat-icon> Mis Compras</button>
+    <button mat-button routerLink="/inicio/editarUsuario"><mat-icon fontIcon="border_color"></mat-icon> Editar datos</button>
+    <button mat-button (click)="logout()">
+        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="logout"></mat-icon>  Salir
+    </button>
+</mat-toolbar>
+
+<mat-card  style="margin:0 17%; margin-top: 3%;">
+    <mat-grid-list *ngIf="persona"  cols="2" rowHeight="70px">
+        <mat-grid-tile [colspan]="2" [rowspan]="3">
+            <img src="../assets/img/logo.png" alt="logoUser" width="22%">
+        </mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">NOMBRE: {{persona.nombres}}</mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">APELLIDO: {{persona.apellidos}}</mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">EMAIL: {{persona.email}}</mat-grid-tile>
+        <mat-grid-tile [colspan]="1" [rowspan]="1">TELEFONO: {{persona.telefono}}</mat-grid-tile>
+        <mat-grid-tile [colspan]="2" [rowspan]="1">DOMICILIO RESIDENCIAL: {{persona.domicilio1}}</mat-grid-tile>
+        <mat-grid-tile *ngIf="persona.domicilioT" [colspan]="2" [rowspan]="1">DOMICILIO TRABAJO: {{persona.domicilioT}}</mat-grid-tile>
+    </mat-grid-list>
+</mat-card>
+
+<button routerLink="/inicio/producto" class="btn-float"  matTooltip="página de productos" mat-fab color="warn">
+    <mat-icon>home</mat-icon>
+</button>
